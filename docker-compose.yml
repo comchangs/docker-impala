@@ -1,28 +1,28 @@
 version: '3'
 services:
   postgres:
-    image: parrotstream/postgres:10.5
+    image: comchangs/postgres:10.5
     networks:
-    - parrot
+    - comchangs
     ports:
     - 5432:5432
     environment:
       POSTGRES_PASSWORD: postgres
     privileged: true
   zookeeper:
-    image: parrotstream/zookeeper:latest
+    image: comchangs/zookeeper:latest
     networks:
-    - parrot
+    - comchangs
     ports:
     - 2181:2181
     - 2888:2888
     - 3888:3888
   hadoop:
-    image: parrotstream/hadoop:3.0.3
+    image: comchangs/hadoop:3.0.3
     links:
     - zookeeper
     networks:
-    - parrot
+    - comchangs
     ports:
     - 9870:9870
     - 9864:9864
@@ -32,13 +32,13 @@ services:
     - 8188:8188
     - 19888:19888
   hive:
-    image: parrotstream/hive:3.1.0
+    image: comchangs/hive:3.1.0
     links:
     - hadoop
     - zookeeper
     - postgres
     networks:
-    - parrot
+    - comchangs
     environment:
       PGPASSWORD: postgres
     ports:
@@ -53,9 +53,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: parrotstream/impala:latest
+    image: comchangs/impala:latest
     networks:
-    - parrot
+    - comchangs
     links:
     - hadoop
     - hive
@@ -69,6 +69,6 @@ services:
 networks:
   default:
     external:
-      name: parrot
-  parrot:
+      name: comchangs
+  comchangs:
     driver: bridge
