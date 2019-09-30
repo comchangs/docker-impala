@@ -29,9 +29,3 @@ Once started you'll be able to access to the following UIs:
 | *Impala State Store Server* | http://localhost:25010    |
 | *Impala Catalog Server*     | http://localhost:25020    |
 | *Impala Server Daemon*      | http://localhost:25000    |
-
-### Available tags:
-
-- Apache Impala 3.0.0-cdh6.0.0 ([latest](https://github.com/comchangs/docker-impala/blob/latest/Dockerfile), [3.0.0-cdh6.0.0](https://github.com/comchangs/docker-impala/blob/3.0.0-cdh6.0.0/Dockerfile))
-- Apache Impala 2.8.0-cdh5.15.1 ([2.12.0-cdh5.15.1](https://github.com/comchangs/docker-impala/blob/2.12.0-cdh5.15.1/Dockerfile))
-- Apache Impala 2.8.0-cdh5.11.1 ([2.8.0-cdh5.11.1](https://github.com/comchangs/docker-impala/blob/2.8.0-cdh5.11.1/Dockerfile))
