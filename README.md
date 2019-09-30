@@ -18,7 +18,7 @@ You can also find other images based on different Apache Impala releases, using 
 
 Stop with Docker Compose:
 
-    docker-compose -p parrot
+    docker-compose -p comchangs
 
 Setting the project name to *parrot* with the **-p** option is useful to share the network created with the containers coming from other Parrot docker-compose.yml configurations.
 
